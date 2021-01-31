@@ -35,5 +35,5 @@ class GetCreatureIcon:
         
 
 if __name__ == "__main__":
-    creature_image = GetCreatureIcon("Acid Blob")
+    creature_image = GetCreatureIcon("Gazer Spectre")
     creature_image.get_icon()
