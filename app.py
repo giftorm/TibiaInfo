@@ -1,16 +1,22 @@
-import tkinter
-from tibiawiki import Creatures
+import os
+from tkinter import *
+from tkinter.ttk import *
+from tibiawiki.Creatures import Creatures
 
 def main():
-    window = tkinter.Tk()
+    root = Tk()
+    root.title("TibiaInfo")
+    icon = PhotoImage(file='icon.png')
+    root.geometry("800x600")
+    root.iconphoto(False, icon)
 
-    label = tkinter.Label(text="Hello , wordl!", background="red")
+    label = Label(text="Hello , wordl!", background="red")
     label.pack()
 
-    data = Creatures.Creatures()
+    data = Creatures()
     creature_list = data.list()
 
-    window.mainloop()
+    root.mainloop()
 
 
 

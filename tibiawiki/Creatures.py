@@ -10,8 +10,8 @@ class Creatures:
         return self.creatures
     
     def _list_creatures(self):
-        self.creatures = requests.get(self.get_creatures_uri)
-        print("creatures: " + self.creatures)
+        response = requests.get(self.get_creatures_uri)
+        self.creatures = response.json()
 
 if __name__ == "__main__":
     creature = Creatures()
