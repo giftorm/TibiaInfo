@@ -25,14 +25,14 @@ class GetCreatureIcon:
             # Open a local file with wb ( write binary ) permission.
             with open(file_to_open, 'wb') as f:
                 shutil.copyfileobj(r.raw, f)
-                
+
             print('Image sucessfully Downloaded: ',file_to_open)
         else:
             print('Image Couldn\'t be retreived')
 
     def _convert_name(self):
         return self.name.lower().replace(" ", "") + ".gif"
-        
+
 
 if __name__ == "__main__":
     creature_image = GetCreatureIcon("Gazer Spectre")

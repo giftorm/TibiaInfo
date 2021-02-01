@@ -1,23 +1,29 @@
 import os
-from tkinter import *
-from tkinter.ttk import *
+import tkinter
+from tkinter import ttk
+from ttkthemes import ThemedStyle
 from tibiawiki.Creatures import Creatures
 
 def main():
-    root = Tk()
+    root = tkinter.Tk()
     root.title("TibiaInfo")
-    icon = PhotoImage(file='icon.png')
+    icon = tkinter.PhotoImage(file='icon.png')
+
+
     root.geometry("800x600")
     root.iconphoto(False, icon)
 
-    label = Label(text="Hello , wordl!", background="red")
+    style = ThemedStyle(root)
+    style.set_theme("equilux")
+    root.configure(background = "#414141")
+    label = tkinter.Label(text="Hello , world!")
+    label.configure(background = "#414141")
     label.pack()
 
     data = Creatures()
     creature_list = data.list()
 
     root.mainloop()
-
 
 
 if __name__ == "__main__":
